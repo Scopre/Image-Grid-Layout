@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.large {
+    grid-column: span 2;
+}
+
+.medium {
+    grid-row: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/beachview.jpg" class="grid-item large" alt="Beach View">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/bernhard-uTd-kylh7bE-unsplash.jpg" class="grid-item" alt="Living Room">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/table.jpg" class="grid-item" style="height: 50%; object-fit: cover; alt="Food Table">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/florian-schmid-f1PzRPbqt0M-unsplash.jpg" class="grid-item medium" alt="Building with Red Door">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/jasper-gribble-TTExgxV06KA-unsplash.jpg" class="grid-item" alt="Apartment Buildings">
+        <img src="C:/Users/USER/Desktop/Programming Class/Image Grid Layut/pawel-czerwinski-Wuu6H3mI7UA-unsplash.jpg" class="grid-item medium" style="height: 50%; object-fit: cover; alt="Hill and Beach View">
+    </div>
+</body>
+</html>
